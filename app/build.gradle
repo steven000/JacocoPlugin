@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.wuwen.classreplace'
+//apply plugin: 'com.wuwen.jacoco-android'
+
+//classreplace {
+//    sourceType 'class'
+//    configFiles file('src/classreplace/class-replace-config.txt')
+//}
+
+//jacoco {
+//    toolVersion = "0.8.5"
+//}
+
+tasks.withType(Test) {
+//    jacoco.includeNoLocationClasses = true
+}
+
+//jacocoAndroidUnitTestReport {
+//    csv.enabled false
+//    html.enabled true
+//    xml.enabled true
+//
+//
+//    excludes += ['**/google/*/**.*',
+//                 '**/facebook/*/**.*',
+//                 'com/netease/*/**.*',
+//                 'com/google/zxing/client/android/*/**.*',
+//                 'com/google/zxing/client/android/**.*',
+//                 'com/google/zxing/client/android/camera/open/**.*',
+//
+//                 'jp/co/huobi/japan/view',
+//                 'jp/co/huobi/japan/databinding',
+//                 'jp/co/huobi/japan/page',
+//                 'jp/co/huobi/japan/adapter',
+//                 'com/alibaba/android/arouter/routes',
+//                 'jp/co/huobi/japan/kline/view',
+//                 'jp/co/huobi/japan/push',
+//                 'android/support/v7/widget/helper',
+//                 'jp/co/huobi/japan/trade/adapter',
+//                 'jp/co/huobi/japan/exchange/adapter',
+////                 'jp/co/huobi/japan/order/event',
+//                 'jp/co/huobi/japan/market/adapter',
+//                 'jp/co/huobi/japan/api/helper',
+//                 'jp/co/huobi/japan/market/view',
+//                 'jp/co/huobi/japan/common/handler',
+//                 'jp/co/huobi/japan/assets/handler',
+//                 'jp/co/huobi/japan/exchange/handler',
+//                 'jp/co/huobi/japan/kline/loop',
+//                 'jp/co/huobi/japan/account/handler',
+//                 'jp/co/huobi/japan/view/rollviewpager/adapter',
+//                 'jp/co/huobi/japan/view/rollviewpager/hintview',
+//                 'jp/co/huobi/japan/view/rollviewpager',
+//                 'jp/co/huobi/japan/view/keyboard',
+//                 'jp/co/huobi/japan/view/roundimg',
+//                 'jp/co/huobi/japan/view/collapsingtoolbarlayout',
+//                 'jp/co/huobi/japan/view/rv',
+//                 'jp/co/huobi/japan/market/handler',
+//                 'jp/co/huobi/japan/model',
+//                 'jp/co/huobi/japan/kline/ui',
+//                 'jp/co/huobi/japan/finance/handler',
+//                 'jp/co/huobi/japan/depositwithdraw/bankmanager/ui',
+//                 'jp/co/huobi/japan/manage',
+//                 'jp/co/huobi/japan/depositwithdraw/bankmanager/handler',
+//                 'jp/co/huobi/japan/permissions',
+//                 'jp/co/huobi/japan/assets/adapter',
+//                 'jp/co/huobi/japan/depositwithdraw/handler',
+//                 'jp/co/huobi/japan/order/handler',
+//                 'com/ae/baselib/flutter/imagepicker',
+//
+//                 //           'jp/co/huobi/japan/kline/handler',
+//                 //          'jp/co/huobi/japan/depositwithdraw/ui',
+//                 'jp/co/huobi/japan/trade',
+//                 'jp/co/huobi/japan/account/event',
+//                 'jp/co/huobi/japan/order/ui',
+//                 //          'jp/co/huobi/japan/finance/ui',
+//                 'jp/co/huobi/japan/language',
+//                 'jp/co/huobi/japan/exchange/ui',
+//
+//    ]
+//}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.dinuscxj.classplugin.example"
+        minSdkVersion 14
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
